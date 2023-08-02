@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<title>login</title>
+		<style>
+			.container{
+				display: flex;
+				width:80%;
+				height:75%;
+				background-color:#E7DFDD;
+				margin-left: 10%;
+				margin-top: 7%;
+				border-radius: 10px;
+			}
+			.formele{
+				width: 90%;
+				height: 6%;
+				margin-top: 2%;
+				border: 2px solid lightgray;
+				border-radius: 4px;
+			}
+			.formelebutt{
+				width: 90%;
+				height: 6%;
+				margin-top: 2%;
+				border: 2px solid lightgray;
+				border-radius: 4px;
+				border-radius: 10px;background-color: #4717F6;border-color: #4717F6;color: #E7DFDD; font-size:16px ;
+			}
+			.formelebutt:hover{
+				color:white;
+				background-color: #3a04fa;
+				box-shadow: 0px 10px 20px -5px #0E0B16;
+				cursor: pointer;
+			}
+			.spa{
+				color: red;
+				font-size:small;
+				font-family: Cornerstone;
+			}
+		</style>
+		<script>
+			function validateform(){
+				var email = document.getElementById("em").value;
+				var pass = document.getElementById("pa").value;
+				if(test(email)){
+					if(test1(pass)){
+						return true;
+					}
+				}
+				return false;
+			}
+		
+			function test(email) {
+				var epat = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+				if(email.match(epat)){
+					document.getElementById("span1").innerHTML ="";
+					return true;
+				}
+				else{
+					document.getElementById("span1").innerHTML = "Invalid email";
+					return false;
+				}
+			}
+		
+			function test1(pass){
+				var ppat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+				if(pass.match(ppat))
+					return true;
+				else{
+					document.getElementById("span2").innerHTML = "Invalid password (must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character)";
+					return false;
+				}
+			}
+
+			function validateform1(){
+				var mail = document.getElementById("ema").value;
+				var pas = document.getElementById("pas").value;
+				var pas1 = document.getElementById("pas1").value;
+				if(test(mail)){
+					if(test1(pas)){
+						if(test2(pas,pas1)){
+						return true;
+						}
+					}
+				}
+				return false;
+			}
+		
+			function test(mail) {
+				var epat = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+				if(mail.match(epat)){
+					document.getElementById("span3").innerHTML ="";
+					return true;
+				}
+				else{
+					document.getElementById("span3").innerHTML = "Invalid email";
+					return false;
+				}
+			}
+		
+			function test1(pas){
+				var ppat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+				if(pas.match(ppat)){
+						document.getElementById("span4").innerHTML="";
+						return true;
+						
+				}
+				else{
+					document.getElementById("span4").innerHTML = "Invalid password (must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character)";
+					return false;
+				}
+			}
+
+			function test2(pas,pas1){
+				if(pas==pas1){
+					document.getElementById("span5").innerHTML="";
+					return true;
+				}
+				else{
+					document.getElementById("span5").innerHTML="password must be same";
+				}
+			}
+
+        $(document).ready(function(){
+			$("#sign").hide()==true;
+			$("#sig").click(function(){
+				$("#log").hide()==true;
+				$("#sign").show();
+			})
+			$("#lo").click(function(){
+				$("#sign").hide()==true;
+				$("#log").show();
+			})
+		})
+		</script>
+		
+
+
+	</head>
+	<body bgcolor="#0E0B16">
+		<div class="container">
+			<img src="pictures/login.jpg" style="height:100%;width: 60%;border-radius: 10px;">
+			<div id ="log"style="background-color: white;width:30%;height:80%;color:#0E0B16;margin-left: 5%;margin-top: 5%;border:2px solid lightgray; border-radius: 10px;">
+				<form style="margin: 10%;font-family: Cornerstone; margin-left: 14%;" onsubmit="return validateform()" method="post" action="main.html">
+					<h3 style="font-family: Cornerstone;">Log in</h3>
+					<label>Email</label><label style="margin-left: 33%;font-size:x-small;">need an account?</label><button id ="sig"style="background-color: white;color: #4717F6;font-size: x-small;border:none">sign up</button><br>
+					<input type="text" class="formele" id="em"></input><br><span class="spa" id="span1"></span><br>
+					<label >Password</label>
+					<input type="password" class="formele" id="pa"></input><br><span class="spa" id="span2"></span><br>
+					<input type="submit" class="formelebutt" value="Log in"></input><br>
+					<br><div style="width: 90%;height: 3%;background-color: white;text-align: center;font-size: small;opacity: 0.6;">--------------------------OR--------------------------</div>
+					<br><input type="submit" class="formelebutt" value="Continue with google" ><br>
+					
+				</form>
+			</div>
+			<div id="sign"style="background-color: white;width:30%;height:80%;color:#0E0B16;margin-left: 5%;margin-top: 5%;border:2px solid lightgray; border-radius: 10px;">
+				<form style="margin: 10%;font-family: Cornerstone; margin-left: 14%;" onsubmit="return validateform1()" method="post" action="main.html">
+					<h3 style="font-family: Cornerstone;">Sign up</h3>
+					<label>Email</label><label style="margin-left: 23%;font-size:x-small;">Already have an account?</label><button id="lo"style="background-color: white;color: #4717F6;font-size: x-small;border:none">Log in</button><br>
+					<input type="text" class="formele" id="ema"></input><br><span class="spa" id="span3"></span><br>
+					<label >Create Password</label>
+					<input type="password" class="formele" id="pas"></input><br><span class="spa" id="span4"></span><br>
+					<label >Confirm Password</label>
+					<input type="password" class="formele" id="pas1"></input><br><span class="spa" id="span5"></span><br>
+					<input type="submit" class="formelebutt" value="Sign up"></input><br>
+					<br><div style="width: 90%;height: 3%;background-color: white;text-align: center;font-size: small;opacity: 0.6;">--------------------------OR--------------------------</div>
+					<br><input type="submit" class="formelebutt" value="Continue with google" ></button><br>
+					
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

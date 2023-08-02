@@ -1,0 +1,322 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>Algorunner</title>
+        <style>
+            .container{
+                display: flex;
+                width:100%;
+                height:10%;
+                background-color: #0E0B16;
+                align-items: flex-start;
+                position: fixed;
+                top:0;
+                left:0;
+            }
+            .navb{
+                display: flex;
+                width:100%;
+                height:5%;
+                background-color: #4717F6;
+                align-items: center;
+                position:fixed;
+                top:66;
+                left:0;
+            }
+            .navb-items{
+                width:auto;
+                height:95%;
+                background-color: #4717F6;
+                border: none;
+                color: #E7DFDD;
+                margin: 2%;
+                font-family: Cornerstone;
+            }
+            .navb-items:hover{
+                opacity:0.8;
+                background-color: #E7DFDD;
+                color: #0E0B16;
+                transition: all 0.4s ease 0s;
+                cursor: pointer;
+            }
+            .mainbuttons{
+                width: 5%;
+                height: 30%; 
+                align-self: center;
+                background-color: #4717F6;
+                color: #E7DFDD;
+                border-width: 3px;
+                border-color: #E7DFDD;
+                margin: 2%;
+                border-radius: 5px;
+                font-family: Cornerstone;
+            }
+            .mainbuttons:hover{
+                opacity:0.8;
+                background-color: #E7DFDD;
+                color: #0E0B16;
+                cursor: pointer;
+            }
+            .latest{
+                display: flex;
+                width:95%;
+                height:30%;
+                background-color:#E7DFDD ;
+                margin-top: 2%;
+                margin-left: 2.5%;
+                border-radius: 8px;
+                box-shadow: 8px 8px 8px 8px #4717F6;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                
+            }
+            .latestitems{
+                width:150px;
+                height:120px;
+                background-color: white;
+                border-radius: 10px;
+                margin: 2%;
+                font-size: Cornerstone;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
+            @keyframes bounce {
+                 0%, 20%, 60%, 100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            80% {
+                transform: translateY(-10px);
+            }
+        }
+            .latestitems:hover {
+                background: #4717F6;
+                box-shadow: 0px 20px 30px -10px #4717F6;
+                opacity: 0.8;
+                color: #E7DFDD;
+                animation: bounce 1s;
+                cursor: pointer;
+            }
+
+            .lang{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 100px 250px 100px;
+                background-color: #0E0B16;
+                grid-gap: 10px;
+                padding: 20px;
+                margin: 2%;
+                
+                
+            }
+            .langitems{
+                color: #E7DFDD;
+                text-align: center;
+                padding:20px 10px;
+                font-size: 60px;
+            }
+            .langbuttons{
+                width: 50%;
+                height: 50%;
+                border-radius: 8px; 
+                background-color:#E7DFDD;
+                color:#0E0B16; 
+                font-size: x-large; 
+                font-weight: bold;
+                margin-top: -5%;
+            }
+            .langbuttons:hover{
+                background-color: #4717F6;
+                color: #E7DFDD;
+                box-shadow: 0px 20px 30px -10px #4717F6;
+                opacity: 0.8;
+                cursor: pointer;
+            }
+            .footer{
+                display: flex;
+                width:100%;
+                height:5%;
+                background-color: #4717F6;
+                align-items: flex-start;
+                position: fixed;
+                bottom:0;
+                left:0;
+            }
+            .about{
+                display: flex;
+                width:100%;
+                height:43%;
+                background-color: #E7DFDD;
+                color:#0E0B16;
+                
+            }
+            .aboutitem{
+                width:25%;
+                height:95%;
+                background-color: #E7DFDD;
+                color: #0E0B16;
+                align-items: center;
+                margin: 2%;
+            }
+            .forum{
+                display:flex;
+                width:100%;
+                height:20%;
+                background-color: #E7DFDD;
+                color: #0E0B16;
+                font-family: Cornerstone;
+                font-size: small;
+                text-align: center;
+                flex-direction: column;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#butt").click(function(){
+                    $(body).load(login.html);
+                })
+            })
+        </script>
+    </head>
+    <body style="margin:0; background-color: #0E0B16;">
+        <div class = "container">
+            <img style="align-items: start; width: 7%; height: 100%;" src="pictures/mainlogo.png"></img>
+            <input type="search" style="align-self: center; width: 50%; height: 30%; margin: 4%; border-color: #4717F6; border-width:3px;background-color: #E7DFDD;""></input>
+            <button class="mainbuttons">SEARCH</button>
+            <button class="mainbuttons" style="margin-left: 20%; width: auto;height: auto;" id=""butt">SIGNUP / LOGIN</button>
+        </div>
+        <div class = "navb">
+            <button class="navb-items">HOME</button>
+            <button class="navb-items">OPERATING SYSTEMS</button>
+            <button class="navb-items">COMPUTER NETWORKS</button>
+            <button class="navb-items">THEORY OF COMPUTATION</button>
+            <button class="navb-items">JAVA</button>
+            <button class="navb-items">DISCRETE MATHEMATICS</button>
+            <button class="navb-items">DSA</button>
+            <button class="navb-items">HTML</button>
+            <button class="navb-items">CSS</button>
+            <button class="navb-items">COMPETITIVE CODING</button>
+        </div>
+        <div style="margin-top: 8%;background-color: #E7DFDD;width:160px;height: 20px;border-radius: 8px;margin-left: 45%;text-align: center;box-shadow: 4px 4px 4px 4px #4717F6;">
+        <p style="font-family: Cornerstone;">Latest Algorithms</p>
+        </div>
+        <div class="latest">
+            <button class="latestitems">
+                <img src="pictures/cpusched.jpeg" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Cpu Scheduling</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/di.png" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Disk Scheduling</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/pagerep.png" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Page Replacement</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/djisk.png" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Dijkstra's Algorithm</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/goback.jpeg" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Go-Back-n ARQ</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/select.jpeg" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Selective repeat</p>
+            </button>
+            <button class="latestitems">
+                <img src="pictures/majority.jpeg" style="width:120px;height: 100px;margin-top: -20%; border-radius: 8px;">
+                <p style="font-family: Cornerstone;">Majority element</p>
+            </button>
+        </div>
+        <div class="lang">
+            <div class="langitems">JAVA</div>
+            <div class="langitems">DSA</div>
+            <div class="langitems">HTML</div>
+            <div class="langitems"><button class="langbuttons">Learn</button></div>
+            <div class="langitems"><button class="langbuttons">Compete</button></div>
+            <div class="langitems"><button class="langbuttons">Practice</button></div>
+            <div class="langitems">....................</div>
+            <div class="langitems">....................</div>
+            <div class="langitems">....................</div>
+        </div>
+        <div class="about">
+            <div class="aboutitem">
+                <p style="font-family: Cornerstone;font-size: large;"><u>Top Tutorials</u></p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp">html</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp">css</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                    <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+                    <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+                    <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+                    <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+                    <li><a href="https://www.w3schools.com/java/default.asp">Java</a></li>
+                    <li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+                    <li><a href="https://www.w3schools.com/jquery/default.asp">jQuery</a></li>
+                </ul>
+            </div>
+            <div class="aboutitem">
+                <p style="font-family: Cornerstone;font-size: large;"><u>Top References</u></p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp">html</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp">css</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                    <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+                    <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+                    <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+                    <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+                    <li><a href="https://www.w3schools.com/java/default.asp">Java</a></li>
+                    <li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+                    <li><a href="https://www.w3schools.com/jquery/default.asp">jQuery</a></li>
+                </ul>
+            </div>
+            <div class="aboutitem">
+                <p style="font-family: Cornerstone;font-size: large;"><u>Top examples</u></p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp">html</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp">css</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                    <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+                    <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+                    <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+                    <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+                    <li><a href="https://www.w3schools.com/java/default.asp">Java</a></li>
+                    <li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+                    <li><a href="https://www.w3schools.com/jquery/default.asp">jQuery</a></li>
+                </ul>
+            </div>
+            <div class="aboutitem">
+                <p style="font-family: Cornerstone;font-size: large;"><u>Get Certified</u></p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp">html</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp">css</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                    <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+                    <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+                    <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+                    <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+                    <li><a href="https://www.w3schools.com/java/default.asp">Java</a></li>
+                    <li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+                    <li><a href="https://www.w3schools.com/jquery/default.asp">jQuery</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="forum"><font>Algo runner is optimized for learning and training. Examples might be simplified and taken from other sources to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using Algo runner, you agree to have read and accepted our terms of use, cookie and privacy policy.</font>
+            <img src="pictures/mainlogo.png" style="width: 50px;height: 50px;margin-left: 50%;">
+        </div>
+        <div class="footer">
+            <button style="background-color: #4717F6;border: #4717F6;width: 50px;height: 30px;"><img src="pictures/inst.png" style="width: 100%;height: 100%;"></button>
+            <button style="background-color: #4717F6;border: #4717F6;width: 50px;height: 30px;"><img src="pictures/mail.png" style="width: 100%;height: 100%;"></button>
+            <button style="background-color: #4717F6;border: #4717F6;width: 50px;height: 30px;"><img src="pictures/what.png" style="width: 100%;height: 100%;"></button>
+            <font style="font-size:large;font-family: Cornerstone;margin-left: 34%;color: #E7DFDD;">Made with ❤️ by Chirag Vats</font>
+        </div>
+        
+    </body>
+</html>
